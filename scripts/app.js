@@ -32,5 +32,20 @@
 	else if (document.getElementById("contact") != null) {
 		console.log("Contact Page");
 
+		var name = document.getElementById("name");
+		var email = document.getElementById("email");
+		var comment = document.getElementById("comment");
+		var button = document.getElementById("button");
+		
+		button.addEventListener("click", function(event){
+		event.preventDefault();
+		console.log("Name:" + name.value);
+		console.log("Email: " + email.value);
+		console.log("Comment: " + comment.value);
+
+		thisDate = new Date();
+		thisYear = thisDate.getFullYear();
+		document.getElementById('footer').innerHTML = "&copy; " + thisYear;
+		});
 	}
 })();
