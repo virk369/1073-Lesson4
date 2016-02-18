@@ -24,10 +24,13 @@
 	}
 	else if (document.getElementById("projects") != null) {
 		console.log("Projects Page");
-		
+
+		thisDate = new Date();
+		thisYear = thisDate.getFullYear();
+		document.getElementById('footer').innerHTML = "&copy; " + thisYear;
 	}
 	else if (document.getElementById("contact") != null) {
 		console.log("Contact Page");
-		
+
 	}
 })();
